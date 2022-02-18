@@ -1,0 +1,15 @@
+n  = 20
+r  = 2
+m  = 4
+R  = 0.5
+nf = 0e+00
+
+OPTS.level    = 30
+NumSuccess    = 5 / 5
+
+AvgAvgDeg         = 6.0
+AvgPositioned     = 19.8
+AvgCPU            = 0.4
+AvgMaxError(Succ) = 6e-15
+AvgRMSD(Succ)     = 2e-15
+==================================================
