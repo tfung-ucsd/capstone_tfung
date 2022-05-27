@@ -75,7 +75,9 @@ for i=1:length(n_tests)
 end
 
 %% plot last run as example
-figure
+fig = figure(1);
+fig.Position = [744,581,1.1762e+03,469];
+
 subplot(1,2,1)
 scatter(orig_data_pts(:,1),orig_data_pts(:,2))
 xlabel("x (m)");ylabel("y (m)");title("Original pts")
@@ -83,9 +85,11 @@ axis([-max(field_length_tests) max(field_length_tests) -max(field_length_tests) 
 subplot(1,2,2)
 scatter(guess_pts(:,1),guess_pts(:,2))
 xlabel("x (m)");ylabel("y (m)");title("Calculated pts, MSE = 0.77m")
-axis([-max(field_length_tests) max(field_length_tests) -max(field_length_tests) max(field_length_tests)])
+axis([-max(field_length_tests) max(field_len
+gth_tests) -max(field_length_tests) max(field_length_tests)])
 immse(fake_pdist(orig_data_pts),fake_pdist(guess_pts(:,1:2)))
 % annotation('textbox',[.2 .5 .3 .3],'String',"immse = 0.7712",'FitBoxToText','on');
+sgtitle("Example CMDS run w/ 10 nodes over 25x25m field, w/ n\_stdev = 1m");
 
 
 
